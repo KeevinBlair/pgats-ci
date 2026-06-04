@@ -1,0 +1,13 @@
+image: mcr.microsoft.com/playwright:v1.47.2-jammy
+
+stages:
+  - test
+
+testes:
+  stage: test
+
+  script:
+    - yarn
+    - npm test
+    - yarn playwright install
+    - yarn run e2e
