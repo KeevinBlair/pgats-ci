@@ -21,7 +21,13 @@ jobs:
         run: node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --coverageDirectory=coverage
 
       - name: Check coverage output
-        run: ls -R coverage || echo "no coverage generated"
+        shell: cmd
+        run: |
+          if exist coverage (
+            dir /s coverage
+          ) else (
+            echo no coverage generated
+          )
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
