@@ -18,7 +18,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Run tests with coverage
-        run: node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage
+        run: node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --coverageDirectory=coverage
 
       - name: Check coverage output
         run: ls -R coverage || echo "no coverage generated"
