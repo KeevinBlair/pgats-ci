@@ -40,3 +40,5 @@
 
 💜⚡️
 # pgats-ci
+
+Pipeline de CI configurado com GitHub Actions, executando testes Jest com geração de coverage e publicação de relatórios como artifacts.
